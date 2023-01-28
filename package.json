@@ -9,11 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.4",
+    "@apollo/react-hooks": "^4.0.0",
+    "@auth0/nextjs-auth0": "^2.1.0",
+    "@emotion/react": "^11.10.5",
     "@next/font": "13.1.1",
+    "@stripe/react-stripe-js": "^1.16.4",
+    "@stripe/stripe-js": "^1.46.0",
+    "apollo-client": "^2.6.10",
+    "bootstrap": "^5.2.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "framer-motion": "^8.4.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
+    "lodash": "^4.17.21",
     "next": "13.1.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-apollo": "^3.1.5",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-paginate": "^8.1.4",
+    "react-toastify": "^9.1.1",
+    "reactstrap": "^9.1.5",
+    "sharp": "^0.31.3",
+    "stripe": "^11.7.0",
+    "urql": "^3.0.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.10.5"
   }
 }
