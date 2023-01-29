@@ -7,16 +7,16 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 import { useStoreContext } from "lib/context";
 const HeroSection = () => {
   const router = useRouter();
-  const { activeTheme } = useStoreContext();
+  const { theme } = useStoreContext();
   const { user, error, isLoading } = useUser();
 
   return (
     <div css={styles.hero}>
       <div css={styles.mask}>
         <Image
-          src={activeTheme == "light" ? Img : heroImg}
+          src={theme == "light" ? Img : heroImg}
           alt="hero-image"
-          css={styles.heroImg({ theme: activeTheme })}
+          css={styles.heroImg({ theme: theme })}
         />
       </div>
       <div css={styles.content}>

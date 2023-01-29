@@ -11,19 +11,7 @@ import { useStoreContext } from "lib/context";
 
 const UserMenuItem = () => {
   const router = useRouter();
-
-  // const [activeTheme, setActiveTheme] = useState("dark");
-  // const inactiveTheme = activeTheme === "light" ? "dark" : "light";
-
-  // useEffect(() => {
-  //   document.body.dataset.theme = activeTheme;
-  // }, [activeTheme]);
-
-  // useEffect(() => {
-  //   const savedTheme = window.localStorage.getItem("theme");
-  //   savedTheme && setActiveTheme(savedTheme);
-  // }, []);
-  const { activeTheme, inactiveTheme, setActiveTheme } = useStoreContext();
+  const { theme, setTheme } = useStoreContext();
   const { user, error, isLoading } = useUser();
 
   if (!user)
@@ -80,10 +68,10 @@ const UserMenuItem = () => {
 
             <p
               className="d-flex align-items-center"
-              onClick={() => setActiveTheme(inactiveTheme)}
+              onClick={() => setTheme(theme == "light" ? "dark" : "light")}
             >
               Change Theme
-              {activeTheme == "light" ? (
+              {theme == "light" ? (
                 <span className="ms-3">
                   <FaRegSun size={18} />
                 </span>
