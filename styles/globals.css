@@ -12,3 +12,23 @@ body {
   border-radius: 8px;
   padding: 8px 12px;
 }
+body,
+body[data-theme="light"] {
+  --color-text-primary: #1a120b;
+  --color-bg-primary: #fad3e7;
+  --color-bg-secondary: #efa3c8;
+  --color-bg-toggle: #1a120b;
+  --color-btn: rgba(243, 183, 229, 0.77);
+  --color-btn-hover: rgba(233, 159, 222, 0.77);
+  --color-btn-hover-pg: #efa3c8;
+}
+
+body[data-theme="dark"] {
+  --color-text-primary: #fff;
+  --color-bg-primary: #1a120b;
+  --color-bg-secondary: #3c2a21;
+  --color-bg-toggle: #a9a9a9;
+  --color-btn: rgba(85, 70, 61, 0.77);
+  --color-btn-hover: #3c2a21;
+  --color-btn-hover-pg: #3c2a21;
+}

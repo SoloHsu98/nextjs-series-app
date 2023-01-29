@@ -138,16 +138,17 @@ const styles = {
     padding: 2em;
     width: 100%;
     height: 100%;
-    background-color: #1a120b;
+    background-color: var(--color-bg-primary);
   `,
   title: css`
     text-align: center;
-    margin-bottom: 1em;
     margin-left: 20em;
+    margin-bottom: 1em;
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--color-text-primary);
     font-weight: 600;
   `,
+
   seriesContainer: css`
     display: flex;
     flex-wrap: wrap;

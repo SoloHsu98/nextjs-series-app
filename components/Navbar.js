@@ -72,8 +72,8 @@ const styles = {
   navContainer: css`
     width: 100%;
     padding: 1em 2em;
-    background-color: #3c2a21;
-    color: #fff;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
   `,
   header: css`
     font-size: 1.25em;
@@ -117,11 +117,11 @@ const styles = {
         transform: translateY(-3px);
       }
       a {
-        color: #fff;
+        color: var(--color-text-primary);
         text-decoration: none;
         &:hover {
           text-decoration: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid var(--color-text-primary);
           box-shadow: 0 4px 8px -8px #fff;
         }
       }
@@ -132,7 +132,7 @@ const styles = {
     padding: 0.3em 2em;
     border: 1px solid #fff;
     background-color: transparent;
-    color: #fff;
+    color: var(--color-text-primary);
     border-radius: 25px;
     font-weight: 500;
     cursor: pointer;

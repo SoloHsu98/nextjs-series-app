@@ -382,26 +382,6 @@ const SeriesCard = ({ seriesCard }) => {
           </Button>
         </ModalFooter>
       </Modal>
-      {/* {removeSuccessModalOpen && (
-        <SuccessModal
-          open={removeSuccessModalOpen}
-          onClose={() => {
-            setRemoveSuccessModalOpen(false);
-          }}
-          title={actionStatus == "saved" ? "Save Series" : "Unsaved Series"}
-          bodyValue={
-            actionStatus == "saved" ? (
-              <span>
-                Series : <b>{savedSeries?.title} </b> is saved
-              </span>
-            ) : (
-              <span>
-                Series : <b>{savedSeries?.title} </b> is unsaved
-              </span>
-            )
-          }
-        />
-      )} */}
     </>
   );
 };
@@ -459,7 +439,7 @@ const styles = {
     font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
-    background: rgba(85, 70, 61, 0.77);
+    background: var(--color-btn);
     position: absolute;
     top: 60%;
     left: 50%;
@@ -467,7 +447,7 @@ const styles = {
     transform: translate(-50%, -50%);
     opacity: 0;
     &:hover {
-      background: #3c2a21;
+      background: var(--color-btn-hover);
     }
   `,
   viewRating: css`
@@ -491,7 +471,7 @@ const styles = {
     white-space: nowrap;
     max-width: 200px;
     font-size: 1em;
-    color: white;
+    color: var(--color-text-primary);
     font-weight: 500;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -504,7 +484,7 @@ const styles = {
     font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
-    background: rgba(85, 70, 61, 0.77);
+    background: var(--color-btn);
     position: absolute;
     top: 80%;
     left: 50%;
@@ -512,20 +492,20 @@ const styles = {
     transform: translate(-50%, -50%);
     opacity: 0;
     &:hover {
-      background: #3c2a21;
+      background: var(--color-btn-hover);
     }
   `,
   collection: css`
     font-size: 1.2rem;
     cursor: pointer;
     .form-check-input:checked {
-      background-color: #3c2a21;
-      border-color: #3c2a21;
+      background-color: var(--color-bg-secondary);
+      border-color: var(--color-bg-secondary);
       box-shadow: none;
     }
   `,
   actionBtn: css`
-    background: #3c2a21;
+    background: var(--color-bg-secondary);
     &:hover {
       background: #45342b;
     }
@@ -537,7 +517,7 @@ const styles = {
     align-items: center;
     gap: 0.3em;
     border-radius: 12px;
-    color: #3c2a21;
+    color: var(--color-bg-secondary);
     background: transparent;
     border: 1.5px solid #3c2a21;
   `,

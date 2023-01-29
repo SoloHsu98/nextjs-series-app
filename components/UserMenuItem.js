@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Button, PopoverBody, UncontrolledPopover } from "reactstrap";
 import { toast } from "react-toastify";
+import { RxMoon } from "react-icons/rx";
+import { FaRegSun } from "react-icons/fa";
+import { useStoreContext } from "lib/context";
 
 const UserMenuItem = () => {
   const router = useRouter();
+
+  // const [activeTheme, setActiveTheme] = useState("dark");
+  // const inactiveTheme = activeTheme === "light" ? "dark" : "light";
+
+  // useEffect(() => {
+  //   document.body.dataset.theme = activeTheme;
+  // }, [activeTheme]);
+
+  // useEffect(() => {
+  //   const savedTheme = window.localStorage.getItem("theme");
+  //   savedTheme && setActiveTheme(savedTheme);
+  // }, []);
+  const { activeTheme, inactiveTheme, setActiveTheme } = useStoreContext();
   const { user, error, isLoading } = useUser();
 
   if (!user)
@@ -32,6 +48,7 @@ const UserMenuItem = () => {
       progress: undefined,
     });
   };
+
   return (
     <>
       <Button
@@ -60,6 +77,23 @@ const UserMenuItem = () => {
           <div css={styles.settingList}>
             <p className="pt-3">{user.email}</p>
             <p>{user.name}</p>
+
+            <p
+              className="d-flex align-items-center"
+              onClick={() => setActiveTheme(inactiveTheme)}
+            >
+              Change Theme
+              {activeTheme == "light" ? (
+                <span className="ms-3">
+                  <FaRegSun size={18} />
+                </span>
+              ) : (
+                <span className="ms-3">
+                  <RxMoon size={18} />
+                </span>
+              )}
+            </p>
+
             <p className="pb-3" onClick={handleLogout}>
               Logout
             </p>
@@ -77,7 +111,7 @@ const styles = {
     padding: 0.3em 2em;
     border: 1px solid #fff;
     background-color: transparent;
-    color: #fff;
+    color: var(--color-text-primary);
     border-radius: 25px;
     font-weight: 500;
     cursor: pointer;
@@ -100,18 +134,21 @@ const styles = {
     font-size: 1rem;
     margin-bottom: 0;
     cursor: pointer;
+    color: var(--color-text-primary);
   `,
   settingList: css`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    cursor: pointer;
 
     p {
       padding: 0.5em 2em;
       width: 100%;
       margin-bottom: 0;
       &:hover {
-        background: grey;
+        background: var(--color-btn-hover);
+        color: #fff;
       }
     }
   `,

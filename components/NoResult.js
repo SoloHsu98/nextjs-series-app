@@ -35,13 +35,13 @@ const styles = {
       font-size: 1.25rem;
       font-weight: 500;
       margin-top: 1.25rem;
-      color: #fff;
+      color: var(--color-text-primary);
     }
     .subTitle {
       display: inline-block;
       margin-top: 0.5rem;
       line-height: 1.5;
-      color: #fff;
+      color: var(--color-text-primary);
     }
     .icon-wrapper {
       padding: 2rem;
@@ -52,7 +52,7 @@ const styles = {
       background-color: transparent;
       svg {
         font-size: 4rem;
-        color: #fff;
+        color: var(--color-text-primary);
       }
     }
   `,

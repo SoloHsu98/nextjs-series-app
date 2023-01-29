@@ -94,7 +94,7 @@ const styles = {
   title: css`
     margin-bottom: 0.8em;
     font-size: 1.7rem;
-    color: #fff;
+    color: var(--color-text-primary);
     font-weight: 500;
     text-align: center;
   `,
@@ -108,17 +108,18 @@ const styles = {
   `,
   seeMoreLink: css`
     align-self: center;
-    border: 1px solid #f4f4f4;
+    border: 1px solid #fff;
     padding: 0.5em 0.8em;
-    background: #3c2a21;
+    background: var(--color-bg-secondary);
     font-size: 13px;
-    color: #fff;
+    color: var(--color-text-primary);
     font-weight: 600;
     border-radius: 8px;
     transition: all 0.3s ease 0s;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
     &:hover {
-      background-color: rgba(88, 73, 64, 0.46);
+      background: var(--color-btn-hover);
+      color: #fff;
       transform: translateY(-3px);
     }
     &:focus {
@@ -128,7 +129,10 @@ const styles = {
   seeMoreBtn: css`
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-text-primary);
+    &:hover {
+      color: #fff;
+    }
   `,
   headerWrapper: css`
     display: flex;
@@ -152,13 +156,13 @@ const styles = {
       font-size: 1.25rem;
       font-weight: 500;
       margin-top: 1.25rem;
-      color: #fff;
+      color: var(--color-text-primary);
     }
     .subTitle {
       display: inline-block;
       margin-top: 0.5rem;
       line-height: 1.5;
-      color: #fff;
+      color: var(--color-text-primary);
     }
     .icon-wrapper {
       padding: 2rem;
@@ -169,7 +173,7 @@ const styles = {
       background-color: transparent;
       svg {
         font-size: 4rem;
-        color: #fff;
+        color: var(--color-text-primary);
       }
     }
   `,

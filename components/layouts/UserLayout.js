@@ -1,7 +1,7 @@
 import Footer from "components/Footer";
 import NavBar from "components/Navbar";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { css } from "@emotion/react";
 
 const UserLayout = ({ children }) => {
@@ -31,6 +31,6 @@ const styles = {
     flex-grow: 1;
     width: 100%;
     height: 100%;
-    background: #1a120b;
+    background: var(--color-bg-primary);
   `,
 };

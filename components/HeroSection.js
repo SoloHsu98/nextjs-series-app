@@ -2,15 +2,22 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import heroImg from "../public/pa.jpeg";
+import Img from "../public/HeroImg.jpeg";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { useStoreContext } from "lib/context";
 const HeroSection = () => {
   const router = useRouter();
+  const { activeTheme } = useStoreContext();
   const { user, error, isLoading } = useUser();
 
   return (
     <div css={styles.hero}>
       <div css={styles.mask}>
-        <Image src={heroImg} alt="hero-image" css={styles.heroImg} />
+        <Image
+          src={activeTheme == "light" ? Img : heroImg}
+          alt="hero-image"
+          css={styles.heroImg({ theme: activeTheme })}
+        />
       </div>
       <div css={styles.content}>
         <p>Watch All Wuxia Series Here</p>
@@ -45,18 +52,18 @@ const styles = {
       top: 0;
       left: 0;
       background-color: #000;
-      opacity: 0.5;
+      opacity: 0.3;
     }
   `,
-  heroImg: css`
+  heroImg: ({ theme }) => css`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0px -60px;
+    object-position: ${theme == "light" ? "0px -100px" : "0px -60px"};
   `,
   content: css`
     position: absolute;
-    max-width: 520px;
+    max-width: 500px;
     transform: translate(-50%, -50%);
     top: 30%;
     left: 50%;

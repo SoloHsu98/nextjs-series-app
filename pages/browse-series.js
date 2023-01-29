@@ -296,8 +296,8 @@ const styles = {
     height: auto;
     padding: 2em;
     padding-top: 3em;
-    color: #fff;
-    background-color: #1a120b;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
   `,
   pagination: css`
     margin-top: 3em;
@@ -307,13 +307,13 @@ const styles = {
     border: none;
     padding: 1em 3em;
     border-radius: 12px;
-    color: #fff;
-    background: #3c2a21;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
   `,
 
   searchContainer: css`
     .form-control {
-      color: #fff;
+      color: var(--color-text-primary);
       font-weight: 500;
       padding: 2em;
     }
@@ -323,16 +323,16 @@ const styles = {
       padding: 1em;
       appearance: none;
 
-      background: #3c2a21
+      background: var(--color-bg-secondary)
         url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
         no-repeat right 0.75rem center;
       border: none;
-      color: #fff;
+      color: var(--color-text-primary);
       &:focus,
       &:hover {
         border: none;
         outline: none;
-        background: #3c2a21
+        background: var(--color-bg-secondary)
           url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
           no-repeat right 0.75rem center;
         box-shadow: none;
@@ -353,14 +353,14 @@ const styles = {
     margin-bottom: 0.5em;
   `,
   inputStyle: css`
-    background: #3c2a21;
+    background: var(--color-bg-secondary);
     border: none;
 
     &:focus,
     &:hover {
       border: none;
       outline: none;
-      background: #3c2a21;
+      background: var(--color-bg-secondary);
       box-shadow: none;
     }
   `,

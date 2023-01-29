@@ -52,7 +52,7 @@ const styles = {
     align-items: center;
     margin-bottom: 0rem;
     .page-item.active .page-link {
-      background: #3c2a21;
+      background: var(--color-bg-secondary);
       z-index: 0;
     }
 
@@ -67,7 +67,7 @@ const styles = {
       align-items: center;
       display: inline-flex;
       margin: 0rem 0.5rem;
-      color: #fff;
+      color: var(--color-text-primary);
       justify-content: center;
       border: none;
       background-color: transparent;
@@ -75,7 +75,7 @@ const styles = {
         outline: none;
       }
       &:hover {
-        background-color: #1a120b;
+        background-color: var(--color-btn-hover-pg);
       }
     }
     .page-item:first-of-type .page-link,
@@ -83,22 +83,22 @@ const styles = {
       width: 40px;
       height: 40px;
       padding: 0.5rem;
-      color: #fff;
+      color: var(--color-text-primary);
       border-radius: 50%;
       margin: 0rem 0.5rem;
       align-items: center;
       display: inline-flex;
       justify-content: center;
       background-color: transparent;
-      border: 1px solid #fff;
+      border: 1px solid var(--color-text-primary);
 
       svg {
         width: 40px;
         height: 17px;
-        color: #fff;
+        color: var(--color-text-primary);
       }
       :hover {
-        background-color: #1a120b;
+        background-color: var(--color-btn-hover-pg);
       }
     }
     .break-link {
@@ -108,7 +108,7 @@ const styles = {
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      color: #fff;
+      color: var(--color-text-primary);
       text-decoration: none;
       background-color: transparent;
       border: 0px;

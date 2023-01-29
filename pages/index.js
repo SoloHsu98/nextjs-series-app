@@ -24,6 +24,6 @@ const styles = {
   mainContainer: css`
     /* width: 100%;
     height: 100%; */
-    background-color: #3c2a21;
+    background-color: var(--color-bg-secondary);
   `,
 };

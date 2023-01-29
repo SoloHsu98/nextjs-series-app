@@ -51,8 +51,8 @@ const styles = {
     width: 100%;
     padding: 1em 2em;
     padding-bottom: 0px;
-    background-color: #3c2a21;
-    color: #fff;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
     border-top: 1px solid #fff;
     display: flex;
     justify-content: space-between;
