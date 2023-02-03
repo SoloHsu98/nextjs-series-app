@@ -21,6 +21,8 @@ body[data-theme="light"] {
   --color-btn: rgba(243, 183, 229, 0.77);
   --color-btn-hover: rgba(233, 159, 222, 0.77);
   --color-btn-hover-pg: #efa3c8;
+  --color-comment: #efa3c8;
+  --color-submit: #efa3c8;
 }
 
 body[data-theme="dark"] {
@@ -31,4 +33,6 @@ body[data-theme="dark"] {
   --color-btn: rgba(85, 70, 61, 0.77);
   --color-btn-hover: #3c2a21;
   --color-btn-hover-pg: #3c2a21;
+  --color-comment: #3c2a21;
+  --color-submit: #1a120b;
 }
