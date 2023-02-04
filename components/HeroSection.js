@@ -79,7 +79,7 @@ const styles = {
     margin-top: 1em;
     border: 1px solid #f4f4f4;
     padding: 1em 2em;
-    background: #1a120b;
+    background: var(--color-bg-primary);
     font-size: 18px;
     color: #fff;
     font-weight: 600;
@@ -87,7 +87,7 @@ const styles = {
     transition: all 0.3s ease 0s;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
     &:hover {
-      background-color: #3c2a21;
+      background-color: var(--color-bg-secondary);
       transform: translateY(-3px);
     }
     &:focus {
