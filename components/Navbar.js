@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useUser } from "@auth0/nextjs-auth0";
 import { BsFillHeartFill } from "react-icons/bs";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
