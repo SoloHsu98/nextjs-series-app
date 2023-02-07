@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import heroImg from "../public/pa.jpeg";
 import Img from "../public/HeroImg.jpeg";
-import { useUser } from "@auth0/nextjs-auth0";
+import { useUser } from "@auth0/nextjs-auth0/client";
 import { useStoreContext } from "lib/context";
 const HeroSection = () => {
   const router = useRouter();

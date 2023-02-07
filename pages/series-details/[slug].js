@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaCommentAlt, FaDownload } from "react-icons/fa";
 import { AiFillStar, AiFillEye } from "react-icons/ai";
-import { useUser } from "@auth0/nextjs-auth0";
+import { useUser } from "@auth0/nextjs-auth0/client";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { v4 as uuid } from "uuid";
 import { GET_SERIES } from "../../graphql/queries/singleSeries";
